@@ -1,11 +1,9 @@
-﻿System.Console.WriteLine("Из N элементов массива A формируется новый массив размер элементов которого меньше либо равна 3");
-System.Console.Write("Введите количество N: ");
+﻿Console.Write("Введите количество элементов массива: ");
 int num = Convert.ToInt32(Console.ReadLine());
-
 string[] array = new string[num];
 for (int i = 0; i < num; i++) {
-    System.Console.Write($"Введите {i + 1} элемент массива A: ");
-    array[i] = Console.ReadLine();
+    Console.Write($"Введите {i + 1} элемент массива: ");
+    array[i] = Console.ReadLine()!;
 }
 
 int count_elements = 0;
@@ -25,4 +23,4 @@ for (int i = 0; i < count_elements; i++) {
     result[i] = array[j];
 }
 
-System.Console.WriteLine("[" + string.Join(", ", result) + "]");
+Console.WriteLine("[" + string.Join(", ", result) + "]");
